@@ -3,8 +3,11 @@ kind: Service
 metadata:
   name: kuard-service
   spec:
-    type: nodePort
+    type: NodePort
     ports:
       - targetPort: 8080
         port: 8080
         nodePort: 30080
+    selector: 
+      name: kuard-service
+
