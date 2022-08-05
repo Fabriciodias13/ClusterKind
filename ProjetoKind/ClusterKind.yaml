@@ -7,7 +7,20 @@ nodes:
 - role: worker
 - role: worker
 - role: worker
+  extraPortMappings: #mapear as portas 80 e 443 em sua máquina local para as portas 80 e 443 no contêiner do nó worker
+  -  containerPort: 80
+     hostPort: 80
+     listenAddress: "0.0.0.0"
+  -  containerPort: 443
+     hostPort: 443
+     listenAddress: "0.0.0.0"
 
 
 # Comando para a criação do cluster:
-#kind create cluster --name nomeDoCluster --config=arquivo.yaml
+#kind create cluster --name nomeDoCluster --config=nomeArquivo.yaml
+
+#Execute o seguinte para instalar o Contour:
+# kubectl apply -f https://projectcontour.io/quickstart/contour.yaml
+
+#Verifique se os pods de contorno estão prontos executando o seguinte:
+# kubectl get pods -n projectcontour -o wide

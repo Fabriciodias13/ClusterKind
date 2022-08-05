@@ -25,6 +25,6 @@ spec:
             memory: "256Mi"
             cpu: "1000m"
         ports:
-        - containerPort: 8080
+        - containerPort: 80
           name: http
           protocol: TCP
