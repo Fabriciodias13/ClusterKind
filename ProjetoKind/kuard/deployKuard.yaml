@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: kuard
-        image: k8sacademy/kuard:blue
+        image: nginx
         resources:
           requests:
             memory: "128Mi"

@@ -1,16 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  labels:
-    app: kuard
   name: kuard-service
 spec:
   type: NodePort
   ports:
     - targetPort: 80
       port: 80
-      nodePort: 30000
+      nodePort: 32000
       protocol: TCP
   selector:
-    name: kuard-service
     app: kuard
