@@ -14,6 +14,9 @@ nodes:
   -  containerPort: 443
      hostPort: 443
      listenAddress: "0.0.0.0"
+  -  containerPort: 8080
+     hostPort: 8080
+     listenAddress: "0.0.0.0" 
 
 
 # Comando para a criação do cluster:
