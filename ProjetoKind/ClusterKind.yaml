@@ -27,3 +27,5 @@ nodes:
 
 #Verifique se os pods de contorno estão prontos executando o seguinte:
 # kubectl get pods -n projectcontour -o wide
+
+#kind delete cluster --name nomeCluster
